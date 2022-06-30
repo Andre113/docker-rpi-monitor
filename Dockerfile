@@ -1,6 +1,6 @@
-FROM resin/rpi-raspbian:latest
+FROM ghcr.io/pi-hole/docker-pi-hole-base:bullseye-slim
 
-LABEL maintainer="Michael Miklis / <info@michaelmiklis.de>"
+LABEL maintainer="André Ota (Forked from Michael Miklis / <info@michaelmiklis.de>)"
 
 RUN [ "cross-build-start" ]
 
