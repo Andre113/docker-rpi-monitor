@@ -1,4 +1,4 @@
-FROM resin/rpi-raspbian:latest
+FROM ghcr.io/pi-hole/docker-pi-hole-base:bullseye-slim
 
 LABEL maintainer="Michael Miklis / <info@michaelmiklis.de>"
 
