@@ -1,8 +1,6 @@
-FROM ghcr.io/pi-hole/docker-pi-hole-base:bullseye-slim
+FROM resin/rpi-raspbian:latest
 
-LABEL maintainer="André Ota (Forked from Michael Miklis / <info@michaelmiklis.de>)"
-
-RUN [ "cross-build-start" ]
+LABEL maintainer="Michael Miklis / <info@michaelmiklis.de>"
 
 ENV  DEBIAN_FRONTEND noninteractive
 
@@ -32,5 +30,3 @@ EXPOSE 8888
 ADD run.sh /run.sh
 RUN chmod +x /run.sh
 CMD bash -C '/run.sh';'bash'
-
-RUN [ "cross-build-end" ]
