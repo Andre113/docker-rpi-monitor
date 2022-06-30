@@ -12,7 +12,7 @@ services:
       - /usr/lib:/dockerhost/usr/lib:ro
     devices:
       - "/dev/vchiq:/dev/vchiq" 
-      - "/dev/vcsm:/dev/vcsm"  
+      - "/dev/vcsm-cma:/dev/vcsm"  
     restart: unless-stopped
     ports:
       - 8888:8888
