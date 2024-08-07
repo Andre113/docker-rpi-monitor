@@ -1,14 +1,6 @@
-FROM balenalib/armv7hf-debian
+FROM balenalib/raspberrypi5
 
-RUN [ "cross-build-start" ]
-
-RUN apt-get update
-RUN apt-get install python-pip
-RUN pip install virtualenv
-
-RUN [ "cross-build-end" ]
-
-LABEL maintainer="Michael Miklis / <info@michaelmiklis.de>"
+LABEL maintainer="Andre"
 
 ENV  DEBIAN_FRONTEND noninteractive
 
