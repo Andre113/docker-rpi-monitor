@@ -1,4 +1,12 @@
-FROM ghcr.io/pi-hole/docker-pi-hole-base:bullseye-slim
+FROM balenalib/armv7hf-debian
+
+RUN [ "cross-build-start" ]
+
+RUN apt-get update
+RUN apt-get install python-pip
+RUN pip install virtualenv
+
+RUN [ "cross-build-end" ]
 
 LABEL maintainer="Michael Miklis / <info@michaelmiklis.de>"
 
